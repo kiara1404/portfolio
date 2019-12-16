@@ -1,0 +1,749 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #000;
+    font-family: 'Raleway', sans-serif;
+    widows: 100vw;
+
+}
+
+.logo {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    float: left;
+    margin-left: 0;
+    
+
+}
+
+.logo h4 {
+    font-weight: 300;
+}
+
+.logo h4 span {
+    font-weight: 700;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 2em;
+    padding: 1.5em 1em;
+
+}
+
+nav li {
+    list-style: none;
+}
+
+
+.nav-links a:hover {
+    background-color: hsla(266, 40%, 70%, 0.7);
+}
+
+.burger div {
+    width: 25px;
+    height: 1px;
+    background-color: #fff;
+    margin: 6px;
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+
+
+    .nav-links {
+      display: none;
+        
+    }
+
+    .nav-links a {
+        padding: 1.5em 4em;
+
+    }
+
+    .nav-links a:hover {
+        background-color: hsla(266, 40%, 70%, 0.7);
+    }
+
+
+    .burger {
+        display: block;
+        margin-right: 0em;
+        cursor: pointer;
+    }
+
+    .logo {
+        margin-right: -2em;
+        font-size: 16px;
+    }
+
+    .wrapper {
+        display: block;
+        position: absolute;
+        top: 4%;
+        left: 45%;
+    }
+
+
+
+}
+
+.nav-active {
+    transform: translateX(0%);
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    right: 0px;
+    color: black;
+    top: 8vh;
+    height: 92vh;
+    width: 50%;
+    position: absolute;
+    
+}
+/*.product-foto{
+    width: 100%;
+}*/
+
+
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+
+    10% {
+        left: 0;
+    }
+
+    20% {
+        left: -100%;
+    }
+
+    30% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    70% {
+        left: -300%;
+    }
+
+    80% {
+        left: -400%;
+    }
+
+    90% {
+        left: -400%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+#slider {
+    overflow: hidden;
+    width: 100vw;
+    height: auto;
+    z-index: -3;
+
+}
+
+#slider figure img {
+    width: 20%;
+    float: left;
+    z-index: -2;
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    animation: slide 120s infinite;
+    z-index: -3;
+}
+
+.wrapper {
+    position: absolute;
+    top: 24%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    z-index: 1;
+    text-align: left;
+    font-size: 3.5vw;
+    opacity: 0.8;
+    z-index: -1;
+
+
+}
+
+.wrapper h2 {
+    position: fixed;
+    margin: 0;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.1em;
+    text-align: left;
+    display: inline-block;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    z-index: -1;
+}
+
+.wrapper span {
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+
+
+
+
+}
+
+.wrapper span:before {
+    content: '';
+    animation: animate infinite 9s;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+}
+
+@keyframes animate {
+    0% {
+        content: 'student'
+    }
+
+    25% {
+        content: 'web designer'
+    }
+
+    50% {
+        content: 'photographer'
+    }
+
+    100% {
+        content: 'frontend developer'
+    }
+
+
+}
+
+.intro-foto {
+    width: 100vw;
+    height: 92vh;
+    background-color: #fff;
+    z-index: -1111;
+}
+
+.intro-foto img {
+    /*    min-width: 450px;*/
+    width: 40vw;
+    float: right;
+    margin: 6em 2em 7em 3em;
+    border: 1px solid black;
+    z-index: 0;
+}
+
+main section div h1 {
+    font-family: 'raleway', sans-serif;
+    font-weight: 400;
+    text-transform: ;
+    font-size: 2em;
+    position: absolute;
+    top: 41%;
+    left: 3.8%;
+}
+
+.about {
+    width: 100vw;
+    height: auto;
+    background-color: #fff;
+    padding-top: 3em;
+    display: block;
+
+}
+
+.about img {
+    height: 28vh;
+    display: inline-block;
+    margin: 1rem auto;
+    border: 1px solid black;
+    float: left;
+
+
+}
+
+.about h3 {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0rem 2rem;
+    margin: 1rem 0 0 6rem;
+}
+
+
+
+main p {
+    font-family: 'Raleweay', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    padding: 1em 1em 0;
+    width: 250px;
+}
+
+.alinea-1 {
+    display: inline-block;
+    float: left;
+    margin: 0 auto;
+}
+
+.alinea-2 {
+    display: inline-block;
+    float: left;
+    margin: 0 auto;
+}
+
+.container {
+    width: 75vw;
+    margin: 0 auto;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    grid-template-rows: auto;
+}
+
+.container button {
+    width: 12rem;
+    height: 3rem;
+    font-size: 16px;
+    color: #000;
+    float: right;
+    margin: 1rem 2rem 1rem -3rem;
+    text-transform: uppercase;
+    font-family: 'raleway', sans-serif;
+    border: 0px;
+    background-color: #c5b5ff;
+    box-shadow: inset 0 0 12px #e4dfff;
+
+}
+
+.container button:hover {
+    background-color: #f0e6ff;
+    box-shadow: inset #c5b5ff 0 0 12px;
+    transition: 0.5s ease;
+}
+
+.projects {
+    width: 100vw;
+    height: auto;
+    background-color: #efefef;
+    padding-top: 0.5rem;
+    margin-top: 1rem;
+}
+
+.projects h3 {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0rem 2rem;
+    margin: 1rem 0 0 6rem;
+    z-index: 0;
+}
+
+.projects p,
+.contact p {
+    width: 40vw;
+    margin: 1rem 0 0 8rem;
+}
+
+.projects h4 {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.grid {
+    width: 87vw;
+    height: auto;
+    margin: 1rem auto;
+    padding: 1rem 0 3rem;
+    ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 18rem));
+    grid-gap: 0.2rem;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.grid article {
+    height: 10rem;
+    width: 18rem;
+    background-color: grey;
+    overflow: hidden;
+    /*    border: 1px solid black;*/
+}
+
+.photography {
+    width: 100vw;
+    height: auto;
+}
+
+.photography h3 {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0rem 2rem;
+    margin: 1rem 0 0 6rem;
+    z-index: 0;
+}
+
+.grid article {
+    position: relative;
+}
+
+.projects .grid article:first-child img {
+    width: 18em;
+    margin-top: -10%;
+    filter: brightness(0.6);
+}
+
+.photography .grid a article:first-child img {
+    width: 18em;
+    margin-top: -10%;
+    filter: brightness(0.6);
+}
+
+.photography .grid article:nth-child(2) img {
+    width: 18em;
+    margin-top: -70%;
+    filter: brightness(0.6);
+}
+
+.photography .grid a article:nth-child(3) img {
+    width: 18em;
+    margin-top: -0%;
+    filter: brightness(0.6);
+}
+
+.photography .grid article:nth-child(4) img {
+    width: 18em;
+    margin-top: -%;
+    filter: brightness(0.6);
+}
+
+.overlay {
+    width: 18em;
+    height: 10em;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+
+}
+
+.photography h4 {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.contact {
+    width: 100vw;
+    height: auto;
+    background-color: #e3d8ed;
+    padding-top: 1em;
+
+}
+
+.contact a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+.contact a:hover {
+    color: #fff;
+    transition: 0.6s ease;
+}
+
+.contact h3 {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0rem 2rem;
+    margin: 1rem 0 0 6rem;
+    z-index: 0;
+}
+
+
+.contact p {
+    font-family: 'raleway', sans-serif;
+    font-size: 1rem;
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+.contact p:nth-child(3) {
+    padding-bottom: 3rem;
+}
+
+footer {
+    width: 100vw;
+    height: auto;
+    background-color: #000;
+}
+
+.social {
+    width: 10rem;
+    margin: 0 auto;
+    align-content: center;
+
+}
+
+footer p {
+    color: #fff;
+    font-family: 'raleway', sans-serif;
+    width: 22rem;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+footer p:last-child {
+    font-size: 12px;
+    text-align: center;
+}
+
+i {
+    color: white;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+    ;
+}
+
+.slaap-tekst{
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0rem 2rem;
+    margin: 1rem 0 0 6rem;
+    z-index: 0;
+}
+
+.slaap h4{
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.slaap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    margin: 1rem 0 0 0;
+}
+.slaap p{
+    width: 20rem;
+    margin: 0 1em 0 3em;
+}
+.slaap p:nth-child(8){
+    margin-bottom: 2rem;
+}
+
+.slaap-img img{
+    height: 15rem;
+    box-shadow: 5px 10px 8px #888;
+}
+.slaap-img{
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+    margin-bottom: 3rem;
+    
+
+}
+
+.slaap-2 p{
+    width: 20rem;
+
+}
+.slaap a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+main article video{
+    height: 40vw;
+
+}
+.video h3{
+        font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 5rem 0 2rem 0;
+}
+
+.product-titel{
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0rem 2rem;
+    margin: 1rem 0 0 0rem;
+    z-index: 0;    
+}
+
+.product-foto img{
+    height: 15rem;
+    box-shadow: 5px 10px 15px #888;
+    margin: 1rem ;
+
+}
+
+.product-info{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;;
+}
+.product-info p{
+    width: 20rem;
+    margin: 0 2rem 0 4rem;;
+}
+
+.product-info p a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+.product-foto{
+    width: 50vw;
+    justify-content: space-between;
+    min-width: 375px;
+}
+
+.product-foto1{
+    width: 50vw;
+    min-width: 375px;
+}
+
+.product-foto1 img{
+    width: 50vw;
+    min-width: 26rem;
+    margin-bottom: 9rem;
+}
+
+.foto-grid{
+    width: 95vw;
+    margin: 1rem auto;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    justify-content: center;
+}
+
+.foto-grid img{
+    height: 30rem;
+
+}
+
+.studio h3{
+        font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0rem 2rem;
+    margin: 1rem 0 0 6rem;
+}
+
+.studio p{
+    margin-left: 7rem;
+    width: 20rem;
+}
+
+.foto-grid2{
+        width: 98vw;
+    margin: 1rem auto;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    justify-content: center;
+}
+.foto-grid2 img{
+    height: 17.5rem;
+}
