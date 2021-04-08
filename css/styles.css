@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 nav {
@@ -12,7 +12,7 @@ nav {
     min-height: 8vh;
     background-color: #000;
     font-family: 'Raleway', sans-serif;
-    widows: 100vw;
+    width: 100vw;
 
 }
 
@@ -247,6 +247,7 @@ nav li {
     font-weight: 600;
     color: #fff;
     display: inline-block;
+    z-index: 999;
 
 
 
@@ -266,12 +267,15 @@ nav li {
         content: 'student'
     }
 
-    25% {
+    20% {
         content: 'web designer'
     }
 
-    50% {
+    40% {
         content: 'photographer'
+    }
+    60% {
+        content: 'videographer'
     }
 
     100% {
@@ -487,6 +491,77 @@ main p {
     filter: brightness(0.6);
 }
 
+
+
+.photography h4 {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.photography {
+    width: 100vw;
+    height: auto;
+}
+
+.photography h3 {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0rem 2rem;
+    margin: 1rem 0 0 6rem;
+    z-index: 0;
+}
+
+.grid article {
+    position: relative;
+}
+
+
+
+
+.videography .grid a article:first-child img {
+    width: 18em;
+    margin-top: -10%;
+    filter: brightness(0.6);
+    
+
+}
+
+.videography {
+    width: 100vw;
+    height: auto;
+    background-color: #efefef;
+    padding-top: 0.5rem;
+    margin-top: 1rem;
+}
+
+.videography .grid a article:first-child img {
+    width: 22em;
+    filter: brightness(0.6);
+    z-index: -111
+
+}
+
+.videography h3 {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0rem 2rem;
+    margin: 1rem 0 0 6rem;
+    z-index: 0;
+}
+.videography h4 {
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin: 30px;
+    position: absolute;
+}
+ 
 .overlay {
     width: 18em;
     height: 10em;
@@ -500,13 +575,6 @@ main p {
     overflow: hidden;
 
 
-}
-
-.photography h4 {
-    font-family: 'raleway', sans-serif;
-    text-transform: uppercase;
-    font-size: 3rem;
-    color: #fff;
 }
 
 .contact {
